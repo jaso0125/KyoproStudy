@@ -2,15 +2,17 @@
 
 namespace Questions
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             // 標準入力
-            var value = Console.ReadLine();
+            var value = int.Parse(Console.ReadLine());
+
+            var area = A01_TheFirstProblem.GetArea(value);
 
             // 標準出力
-            Console.Write(value);
+            Console.Write(area);
         }
     }
 }
