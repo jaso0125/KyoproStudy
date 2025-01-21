@@ -1,4 +1,4 @@
-﻿namespace KyoproStudy
+﻿namespace KyoproStudy.Chapter1
 {
     public static partial class A03
     {
