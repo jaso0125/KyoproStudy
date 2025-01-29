@@ -2,8 +2,20 @@
 
 namespace KyoproStudy.Chapter1
 {
-    public static partial class B03
+    public partial class B03 : ISolveProblem
     {
+        public void SolveProblem()
+        {
+            // 標準入力
+            var value1 = Console.ReadLine();
+            var value2 = Console.ReadLine().Split(' ');
+
+            var result = Supermarket1(value1!, value2);
+
+            // 標準出力
+            Console.Write(result);
+        }
+
         public static string Supermarket1(string strN, string[] strArrayA)
         {
             var intN = int.Parse(strN);

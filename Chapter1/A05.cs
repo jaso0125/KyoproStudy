@@ -1,13 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace KyoproStudy.Chapter1
+﻿namespace KyoproStudy.Chapter1
 {
-    public static partial class A05
+    public partial class A05 : ISolveProblem
     {
+        public void SolveProblem()
+        {
+            // 標準入力
+            var value = Console.ReadLine().Split(' ');
+
+            var result = ThreeCards(value[0], value[1]);
+
+            // 標準出力
+            Console.Write(result);
+        }
+
         public static int ThreeCards(string strN, string strK)
         {
             var intN = int.Parse(strN);
