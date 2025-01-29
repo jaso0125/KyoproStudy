@@ -1,7 +1,28 @@
 ﻿namespace KyoproStudy.Chapter2
 {
-    public static partial class A06
+    public partial class A06 : ISolveProblem
     {
+        public void SolveProblem()
+        {
+            // 標準入力
+            var value1 = Console.ReadLine().Split(' ');
+            var value2 = Console.ReadLine().Split(' ');
+            string[][] value3 = new string[int.Parse(value1[1])][];
+
+            for (int i = 0; i < int.Parse(value1[1]); i++)
+            {
+                value3[i] = Console.ReadLine().Split(' ');
+            }
+
+            var result = A06.HowManyGuests(value1[0], value1[1], value2, value3);
+
+            // 標準出力
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
         public static IEnumerable<int> HowManyGuests(string strN, string strQ, string[] arrayA, string[][] arrayLR)
         {
             var intN = int.Parse(strN);
@@ -38,7 +59,6 @@
                 int sum = total[r] - (l > 0 ? total[l - 1] : 0);
                 result.Add(sum);
             }
-
             return result;
         }
     }
