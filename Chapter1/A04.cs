@@ -1,7 +1,18 @@
 ﻿namespace KyoproStudy.Chapter1
 {
-    public static partial class A04
+    public partial class A04 : ISolveProblem
     {
+        public void SolveProblem()
+        {
+            // 標準入力
+            var value = Console.ReadLine();
+
+            var result = BinaryRepresentation1(value);
+
+            // 標準出力
+            Console.Write(result);
+        }
+
         public static string BinaryRepresentation1(string strN)
         {
             var intN = int.Parse(strN);

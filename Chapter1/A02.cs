@@ -1,14 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace KyoproStudy.Chapter1
+﻿namespace KyoproStudy.Chapter1
 {
-    public static partial class A02
+    public partial class A02 : ISolveProblem
     {
-        public static string linearSearch(string strN, string strX, List<string> srtListA)
+        public void SolveProblem()
+        {
+            // 標準入力
+            var value1 = Console.ReadLine().Split(' ');
+            var value2 = Console.ReadLine().Split(' ');
+
+            var result = LinearSearch(value1[0], value1[1], value2.ToList());
+
+            // 標準出力
+            Console.Write(result);
+        }
+
+        public static string LinearSearch(string strN, string strX, List<string> srtListA)
         {
             var intN = int.Parse(strN);
             var intX = int.Parse(strX);
