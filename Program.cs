@@ -7,7 +7,7 @@ namespace KyoproStudy
     {
         public static void Main(string[] args)
         {
-            var problem = new A06(); // atcoderで回答する際、該当の問題Noを指定する
+            var problem = new B06(); // atcoderで回答する際、該当の問題Noを指定する
 
             problem.SolveProblem();
         }
